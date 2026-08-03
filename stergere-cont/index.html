@@ -5,45 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ștergerea contului — The Youth</title>
   <style>
-    :root { color-scheme: light dark; }
+    /* Fixed light theme. `only light` stops browsers / Android WebView from
+       auto-inverting the page, so it renders identically on every device
+       regardless of the user's system theme. */
+    :root { color-scheme: only light; }
+
+    * { box-sizing: border-box; }
+
+    html, body { background: #ffffff; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       max-width: 720px;
       margin: 0 auto;
       padding: 2rem 1.25rem 4rem;
       color: #1a1a1a;
-      background: #ffffff;
+      -webkit-text-size-adjust: 100%;
     }
-    @media (prefers-color-scheme: dark) {
-      body { color: #e8e8e8; background: #121212; }
-      a { color: #8ab4f8; }
-      .card { background: #1e1e1e; border-color: #333; }
-    }
-    h1 { font-size: 1.6rem; margin-bottom: .25rem; }
-    h2 { font-size: 1.2rem; margin-top: 2rem; }
-    .muted { color: #666; font-size: .95rem; }
+
+    h1 { font-size: 1.6rem; margin-bottom: .25rem; color: #1a1a1a; }
+    h2 { font-size: 1.15rem; margin-top: 2.25rem; color: #1a1a1a; }
+    p  { color: #1a1a1a; }
+    li { color: #1a1a1a; margin: .45rem 0; }
+    strong { color: #1a1a1a; }
+    a { color: #1a56c4; }
+
+    .muted { color: #5a5a5a; font-size: .95rem; }
+
     .card {
-      border: 1px solid #e2e2e2;
+      border: 1px solid #e2e2e4;
       border-radius: 12px;
       padding: 1rem 1.25rem;
       margin: 1.25rem 0;
-      background: #fafafa;
+      background: #f7f7f8;
+      color: #1a1a1a;
     }
+    .card ol, .card ul { margin: 0; }
+
     ol, ul { padding-left: 1.25rem; }
-    li { margin: .4rem 0; }
+
     a.btn {
       display: inline-block;
       margin-top: .5rem;
-      padding: .6rem 1rem;
-      background: #1a73e8;
-      color: #fff;
+      padding: .7rem 1.15rem;
+      background: #1a56c4;
+      color: #ffffff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
     }
-    footer { margin-top: 3rem; font-size: .85rem; color: #888; }
-    code { background: rgba(127,127,127,.15); padding: .1rem .35rem; border-radius: 4px; }
+    a.btn:hover { background: #14449c; }
+
+    code {
+      background: rgba(0, 0, 0, .07);
+      color: #1a1a1a;
+      padding: .12rem .38rem;
+      border-radius: 4px;
+      font-size: .95em;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e2e2e4;
+      font-size: .85rem;
+      color: #5a5a5a;
+    }
   </style>
 </head>
 <body>
@@ -51,35 +79,28 @@
   <p class="muted">Aplicația <strong>The Youth</strong> — Fundația Națională pentru Tineret</p>
 
   <p>
-    Această pagină explică modul în care îți poți șterge contul din aplicația
+    Această pagină explică cum poți solicita ștergerea contului tău din aplicația
     <strong>The Youth</strong> și ce date sunt eliminate în urma acestei acțiuni.
   </p>
 
-  <h2>Cum îți ștergi contul din aplicație</h2>
+  <h2>Cum soliciți ștergerea contului</h2>
   <div class="card">
     <ol>
-      <li>Deschide aplicația <strong>The Youth</strong> și autentifică-te.</li>
-      <li>Mergi la <strong>Profil</strong>.</li>
-      <li>Apasă pe <strong>Șterge contul</strong>.</li>
-      <li>Confirmă acțiunea. Contul și datele asociate sunt șterse imediat.</li>
+      <li>Trimite un email la adresa <code>bogdan.monea@rotineret.ro</code>, folosind butonul de mai jos.</li>
+      <li>Include în mesaj <strong>numărul de telefon sau adresa de email</strong> asociată contului tău, ca să te putem identifica.</li>
+      <li>Primești confirmarea ștergerii pe email, în cel mult <strong>30 de zile</strong> de la solicitare.</li>
     </ol>
   </div>
 
-  <h2>Alternativ: solicită ștergerea prin email</h2>
   <p>
-    Dacă nu mai ai acces la aplicație, poți solicita ștergerea contului trimițând
-    un email către adresa de mai jos. Te rugăm să incluzi numărul de telefon sau
-    adresa de email asociată contului, ca să te putem identifica.
-  </p>
-  <p>
-    <a class="btn" href="mailto:bogdan.monea@rotineret.ro?subject=Solicitare%20stergere%20cont%20-%20The%20Youth&body=Buna%20ziua%2C%0A%0ADoresc%20stergerea%20contului%20meu%20si%20a%20datelor%20asociate%20din%20aplicatia%20The%20Youth.%0A%0ANumar%20de%20telefon%2Femail%20asociat%20contului%3A%20%0A%0AMultumesc.">
+    <a class="btn" href="mailto:bogdan.monea@rotineret.ro?subject=Solicitare%20stergere%20cont%20-%20The%20Youth&body=Buna%20ziua%2C%0A%0ADoresc%20stergerea%20contului%20meu%20si%20a%20datelor%20asociate%20din%20aplicatia%20The%20Youth.%0A%0ANumar%20de%20telefon%20sau%20email%20asociat%20contului%3A%20%0A%0AMultumesc.">
       Trimite solicitarea de ștergere
     </a>
   </p>
-  <p class="muted">Email de contact: <code>bogdan.monea@rotineret.ro</code></p>
+  <p class="muted">Adresă de contact: <code>bogdan.monea@rotineret.ro</code></p>
 
   <h2>Ce date sunt șterse</h2>
-  <p>La ștergerea contului, următoarele date sunt eliminate definitiv:</p>
+  <p>În urma solicitării, următoarele date sunt eliminate definitiv:</p>
   <ul>
     <li>Numele și prenumele</li>
     <li>Adresa de email</li>
@@ -92,14 +113,18 @@
 
   <h2>Ce date se păstrează și pentru cât timp</h2>
   <p>
-    În urma ștergerii contului, datele personale de mai sus sunt eliminate și nu
-    sunt păstrate. Anumite informații pot fi reținute temporar doar dacă acest
-    lucru este impus de obligații legale (de exemplu, registre contabile sau de
-    securitate), pe perioada minimă prevăzută de lege, după care sunt șterse.
+    Datele personale de mai sus sunt eliminate din sistemele noastre active la
+    momentul procesării solicitării și din copiile de siguranță în termen de
+    maximum 90 de zile.
+  </p>
+  <p>
+    Anumite informații pot fi reținute mai mult doar dacă acest lucru este impus de
+    obligații legale (de exemplu, raportări financiare sau evidențe cerute pentru
+    proiecte finanțate), pe perioada minimă prevăzută de lege, după care sunt șterse.
   </p>
 
   <footer>
-    The Youth — Fundația Națională pentru Tineret · Contact:
+    The Youth — Fundația Națională pentru Tineret ·
     <a href="mailto:bogdan.monea@rotineret.ro">bogdan.monea@rotineret.ro</a>
   </footer>
 </body>
